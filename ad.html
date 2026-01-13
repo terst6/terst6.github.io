@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VillaWar: Creating houses - villas into the game</title>
+    <style type="text/css">
+        h1 {
+            font-weight: normal
+        }
+
+        img:hover {
+            cursor: grab
+        }
+    </style>
+    <script type="text/javascript" src="const.js"></script>
+    <script type="text/javascript" src="const1.js"></script>
+    <script>
+        window.onload = function () {
+            htmls_ = {
+                en: "Creating houses - villas into the game\r\
+1. Game level customization\r\
+We can customize your house - villa into a game level for players to play against each other.\r\
+2.Game Mode Customization\r\
+You can customize your gameplay with different camera modes, such as letting your customers view your house - villa with flying insects, and support VR.The game can be placed on our server, or made into a standalone spectator game.\r\
+You have to provide us with a sufficiently high - resolution 3D model of your house, and we will translate it into the game.We do not model houses.\r\
+Contact us\r\
+Back",
+                ar: "إنشاء منازل - فيلات في اللعبة\r\
+1 - تخصيص مستوى اللعبة\r\
+يمكننا تحويل منزلك - فيلا إلى مستوى لعبة ليلعبها اللاعبون ضد بعضهم البعض.\r\
+            2. تخصيص وضع اللعبة\r\
+يمكنك تخصيص طريقة لعبك باستخدام أوضاع مختلفة للكاميرا، على سبيل المثال السماح لعملائك بمشاهدة منزلك - الفيلا مع الحشرات الطائرة أو مع تمكين الواقع الافتراضي.يمكن استضافة اللعبة على خوادمنا أو تحويلها إلى لعبة مستقلة للمشاهدة.\r\
+يجب أن تزوّدنا بنموذج ثلاثي الأبعاد عالي الدقة لمنزلك، والذي سنقوم بترجمته إلى اللعبة.نحن لا نقوم بنمذجة المنازل.\r\
+تواصل معنا\r\
+العودة",
+                de: "Häuser - Villen im Spiel erstellen\r\
+1. die Anpassung der Spielebene\r\
+Wir können Ihr Haus - Ihre Villa in ein Spiellevel verwandeln, in dem Spieler gegeneinander spielen können.\r\
+2) Spielmodus - Anpassung\r\
+Sie können Ihr Spiel mit verschiedenen Kameramodi anpassen, z.B.indem Sie Ihre Kunden Ihr Haus - Villa mit fliegenden Insekten betrachten lassen, VR - fähig.Das Spiel kann auf unseren Servern gehostet oder zu einem eigenständigen Zuschauerspiel gemacht werden.\r\
+Sie müssen uns ein ausreichend hoch aufgelöstes 3D - Modell Ihres Hauses zur Verfügung stellen, und wir werden es in das Spiel übertragen.Wir modellieren keine Häuser.\r\
+Kontaktieren Sie uns\r\
+Zurück",
+                es: "Creación de casas - villas en el juego\r\
+1. Personalización de niveles de juego\r\
+Podemos convertir tu casa - villa en un nivel de juego para que los jugadores se enfrenten entre sí.\r\
+            2. Personalización del modo de juego\r\
+Puede personalizar su juego con diferentes modos de cámara, por ejemplo, permitiendo a sus clientes ver su casa - chalet con insectos voladores, habilitado para RV.El juego puede alojarse en nuestros servidores o convertirse en un juego independiente para espectadores.\r\
+Tiene que proporcionarnos un modelo 3D de su casa con suficiente resolución, y nosotros lo trasladaremos al juego.No modelamos casas.\r\
+Póngase en contacto con nosotros\r\
+            Volver",
+                fr: "Création de maisons et de villas dans le jeu\r\
+1. personnalisation du niveau de jeu\r\
+Nous pouvons transformer votre maison ou votre villa en un niveau de jeu permettant aux joueurs de s'affronter.\r\
+2. personnalisation du mode de jeu\r\
+Vous pouvez personnaliser votre jeu avec différents modes de caméra, par exemple en permettant à vos clients de voir votre maison - villa avec des insectes volants, en utilisant la technologie VR.Le jeu peut être hébergé sur nos serveurs ou devenir un jeu de spectateur autonome.\r\
+                Vous devez nous fournir un modèle 3D de votre maison avec une résolution suffisante, et nous le traduirons dans le jeu.Nous ne modélisons pas les maisons.\r\
+Contactez nous\r\
+Retour",
+                'hi-IN': "घरों को खेल में खेल बनाएँ\r\
+1. खेल स्तर की मनपसंद\r\
+हम अपने घर विला को खेलाड़ियों के विरुद्ध लड़ने के लिए एक खेल स्तर में बदल सकते हैं\r\
+2. खेल मोडों के गहरे अनुकूलन\r\
+आप खेलाड़ी कैमेरा मोडों को मनपसंद कर सकते हैं जिन्हें खेल शैली से अलग हैं, जैसे कि ग्राहकों को अपने घर वीला को उड़ाने के साथ ब्राउज़र करने के लिए अनुमति द\r\
+आपको घर का एक उच्च परिभाषा 3D मॉडल देना चाहिए, और हम उसे खेल में रूपांतरित करेंगे। हम घर मॉडल नहीं बनाते हैं\r\
+संपर्क जानकारी\r\
+return",
+                id: "Menciptakan rumah - vila ke dalam game\r\
+1. Kustomisasi tingkat permainan\r\
+Kami dapat membuat rumah - villa Anda menjadi level permainan untuk dimainkan oleh para pemain satu sama lain.\r\
+            2. Kustomisasi Mode Permainan\r\
+Anda dapat menyesuaikan permainan Anda dengan mode kamera yang berbeda, misalnya membiarkan pelanggan Anda melihat rumah - vila Anda dengan serangga terbang, berkemampuan VR.Permainan ini dapat dihosting di server kami atau dijadikan permainan penonton mandiri.\r\
+Anda harus memberi kami model 3D resolusi tinggi dari rumah Anda, yang akan kami terjemahkan ke dalam permainan.Kami tidak membuat model rumah.\r\
+Hubungi kami\r\
+Kembali",
+                pt: "Criar casas - vilas no jogo\r\
+1. personalização do nível de jogo\r\
+Podemos transformar a tua casa - vivenda num nível de jogo para os jogadores jogarem uns contra os outros.\r\
+            2. personalização do modo de jogo\r\
+Pode personalizar a sua jogabilidade com diferentes modos de câmara, por exemplo, permitindo que os seus clientes vejam a sua casa - villa com insectos voadores, com recurso a RV.O jogo pode ser alojado nos nossos servidores ou transformado num jogo de espetador autónomo.\r\
+Tem de nos fornecer um modelo 3D de alta resolução da sua casa, que nós traduziremos para o jogo.Não fazemos maquetas de casas.\r\
+                Contactar - nos\r\
+Voltar",
+                ja: "別荘をゲームに組み込む\r\
+1.ゲームレベルのカスタマイズ\r\
+あなたの家や別荘を、プレイヤー同士が対戦できるゲームレベルにすることができます。\r\
+                2.ゲームモードのカスタマイズ\r\
+様々なカメラモードを使ってゲームプレイをカスタマイズすることができます。 例えば、昆虫が飛んでいる家や別荘をお客様に見てもらったり、VRに対応させたりすることができます。 ゲームは当社のサーバーでホストすることも、スタンドアローンの観戦ゲームにすることもできます。\r\
+                十分な高解像度の家の3Dモデルをご提供ください。 家のモデリングは行っておりません。\r\
+                お問い合わせ\r\
+戻る",
+                ko: "게임에 집-빌라 만들기\r\
+1. 게임 레벨 커스터마이징\r\
+플레이어가 서로 대결할 수 있도록 집- 빌라를 게임 레벨로 만들 수 있습니다.\r\
+            2. 게임 모드 사용자 지정\r\
+다양한 카메라 모드로 게임플레이를 사용자 지정할 수 있습니다(예: 고객이 날아다니는 곤충이 있는 집 - 빌라를 VR로 볼 수 있도록 하는 등).게임을 유니티 서버에서 호스팅하거나 독립형 관전자 게임으로 만들 수 있습니다.\r\
+집의 충분한 고해상도 3D 모델을 제공해야 하며, 이를 게임으로 번역해 드립니다.유니티는 모델하우스를 제작하지 않습니다.\r\
+                문의하기\r\
+뒤로",
+                uk: "Створення будинків - вілл у грі\r\
+1. налаштування ігрового рівня\r\
+Ми можемо перетворити ваш будинок - віллу в ігровий рівень, щоб гравці могли грати один проти одного.\r\
+            2. налаштування режиму гри\r\
+Ви можете налаштувати свій ігровий процес за допомогою різних режимів камери, наприклад, дозволити вашим клієнтам побачити ваш будинок - віллу з літаючими комахами, з підтримкою VR.Гра може бути розміщена на наших серверах або зроблена як окрема гра для глядачів.\r\
+Ви повинні надати нам 3D - модель вашого будинку з достатньо високою роздільною здатністю, яку ми перенесемо в гру.Ми не моделюємо будинки.\r\
+                Зв'яжіться з нами\r\
+Назад",
+                tr: "Oyunda evler - villalar yaratmak\r\
+1. Oyun seviyesi özelleştirme\r\
+Evinizi - villanızı oyuncuların birbirlerine karşı oynaması için bir oyun seviyesine dönüştürebiliriz.\r\
+            2. Oyun Modu Özelleştirme\r\
+Oyununuzu farklı kamera modlarıyla özelleştirebilirsiniz, örneğin müşterilerinizin evinizi görmesine izin verebilirsiniz - uçan böcekli villa, VR özellikli.Oyun sunucularımızda barındırılabilir veya bağımsız bir seyirci oyunu haline getirilebilir.\r\
+Bize evinizin oyuna aktaracağımız yeterince yüksek çözünürlüklü bir 3D modelini sağlamalısınız.Biz ev modellemesi yapmıyoruz.\r\
+Bize ulaşın\r\
+Geri",
+                'zh-Hans-CN': "\
+                把房屋/ 别墅制作到游戏里\r\
+                1.游戏关卡定制\r\
+                我们可以把你的房屋/ 别墅做成游戏关卡, 让玩家对战\r\
+                2.游戏模式深度定制\r\
+                你可以定制不同于游戏风格的玩家镜头模式, 比如让顾客以飞行昆虫浏览你的房屋 / 别墅, 可以支持VR.游戏可以放我们服务器, 或者做成独立的观赏型游戏.\r\
+                你必须提供房屋足够高清的3D模型, 我们将其转化到游戏里.我们不制作房屋建模.\r\
+                联系方式\r\
+                返回\r\
+                    ",
+                'zh-Hant-TW': "把房屋-別墅製作到遊戲裏\r\
+1.遊戲關卡定制\r\
+我們可以把你的房屋- 別墅做成遊戲關卡，讓玩家對戰\r\
+            2.遊戲模式深度定制\r\
+            你可以定制不同於遊戲風格的玩家鏡頭模式，比如讓顧客以飛行昆蟲瀏覽你的房屋 - 別墅，可以支持VR.遊戲可以放我們服務器，或者做成獨立的觀賞型遊戲.\r\
+                你必須提供房屋足够高清的3D模型，我們將其轉化到遊戲裏.我們不製作房屋建模.\r\
+                    聯繫方式\r\
+返回",
+            }
+            loadLan()
+        }
+    </script>
+</head>
+<body style="margin:20px">
+
+    <div style="background:#d3d3d3;padding:20px;text-align:center">
+        <h1>{?}:</h1>
+    </div>
+
+    <h1>{?}:</h1>
+    {?}
+
+    <h1>{?}:</h1>
+    {?}
+    <br>
+    <br>{?}
+    <br>
+    <br>
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    <img src='lan.png' width=64 height=64 onclick='lan.style.display=""'>
+                </td>
+                <td style='line-height:200%'>
+                    {?}: <img src='ok1.png'><span id=mail_div></span><img src='ok2.png'>
+                    <br><a id="return" href="index.html" style='float:right'>[{?}]</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div id='lan' style='display:none'>
+        <img src='lans.png' usemap='#lan'>
+        <a id=map_div></a>
+    </div>
+</body>
+</html>

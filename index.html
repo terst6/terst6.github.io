@@ -1,0 +1,765 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VillaWar</title>
+    <style type="text/css">
+      .div1 {
+        text-align: center;
+        width: 100%;
+      }
+      img:hover {
+        cursor: grab;
+      }
+    </style>
+    <script type="text/javascript" src="const.js"></script>
+    <script type="text/javascript" src="const1.js"></script>
+    <script>
+      window.onload = function() {
+        htmls_ = {
+          en:
+            "\
+                VillaWar It is a slow-paced sniper mobile game in which spiders fight for the right to survive in human dwellings. Through teamwork, laying spider web traps, venom traps, spraying various attributes of spider web orbs, changing the opponent's attack attributes and hurting the opponent. \
+                Showcase the environment with beautifully realistic graphics.<br><br>\
+				Game Over:<br>\
+1. Exceeding the game limit<br>\
+2. Destroy the boss<br>\
+3. There is only one team left<br>\
+<br>\
+Attack Damage Circle: Amplifies Attack Damage by 0.1-2.0 times clockwise<br>\
+<br>\
+Spider Web: Can be captured: Spider/Venom/Tier 1 Corn Bomb. If an enemy is caught, it will change the opponent's attack power color circle and freeze for a certain period of time; If there is a level 1 corn bomb on the net, it will cause an explosion.<br>\
+<br>\
+Venom: Continuous damage, disappears after 3 minutes<br>\
+<br>\
+Ice Puck: Causes the enemy's attack color circle to change, freeze for a certain amount of time, and deal damage<br>\
+<br>\
+Level 1 Corn Bomb: Can be pre-buried in cobwebs; Hitting an enemy on a wall causes them to fall and fall into damage, face damage, up to a maximum of 100 damage<br>\
+<br>\
+Level 2 Corn Bomb: Grenade, 6 seconds delay explosion, area damage, maximum damage 1000<br>\
+<br>\
+Level 3 Corn Bomb: Mine, explodes on touch, face damage, max damage 1000\r\
+                Gameplay demo video. \r\
+                Video\r\
+                TikTok\r\
+                Android Market\r\
+                Cloud Drive\r\
+                Access Code\r\
+                Apple Store\r\
+                In case of serious errors, you can send the game log via Settings\r\
+                Send game log\r\
+                Test tips:\r\
+                Real game on two phones manually\r\
+                Use\r\
+                Start the game on one phone and create a room with four teammates for the match. Repeat the same process on the other phone, with a 15-second wait for the match to start. Each team should have three AI bots to assist in the battle.\r\
+                Automated test: To test the battle scenario, on all phones, click on the icon during the game startup screen.\r\
+                three times during the game startup screen to activate the test mode (only one operation).\r\
+                2-phone automatic test\r\
+                Start a game match on one phone using\r\
+                or 1*n to start the game match. Repeat the same process for the other phone. When the game starts, there is a Wi-Fi signal from one cell phone (marked 1 in red).\r\
+                Click on the test button (marked 2 in red) to start the automatic test, a game will take about 7-8 minutes, the other phone should not operate it.\r\
+                3 cell phone auto-test\r\
+                Each player selects 2*2 or 2*n mode to start the game, there is a 30 seconds wait for the game to start.\r\
+                To make your house/villa into a game, please contact us!\r\
+                TEST TIPS.\r\
+                Game Privacy Policy\r\
+                ",
+          ar:
+            "\
+                VillaWar إنها لعبة قنص متنقلة بطيئة الإيقاع تقاتل فيها العناكب من أجل حق البقاء على قيد الحياة في مساكن البشر. من خلال العمل الجماعي، ونصب أفخاخ شبكة العنكبوت، وفخاخ السم، ورش مختلف سمات كرة شبكة العنكبوت، وتغيير سمات هجوم الخصم وإلحاق الضرر بالخصوم. \
+                عرض البيئة برسومات واقعية جميلة.<br><br>\
+انتهت اللعبة:<br>\
+1. تجاوز حد اللعبة<br>\
+2. تدمير رئيسه<br>\
+3. لم يتبق سوى فريق واحد<br>\
+<br>\
+دائرة أضرار الهجوم: تضخم ضرر الهجوم بمقدار 0.1-2.0 مرة في اتجاه عقارب الساعة<br>\
+<br>\
+شبكة العنكبوت: يمكن التقاطها: قنبلة الذرة العنكبوت / السم / المستوى 1. إذا تم القبض على عدو ، فسوف يغير دائرة لون قوة هجوم الخصم ويتجمد لفترة زمنية معينة ؛ إذا كانت هناك قنبلة ذرة من المستوى 1 على الشبكة ، فسوف تتسبب في حدوث انفجار.<br>\
+<br>\
+السم: ضرر مستمر ، يختفي بعد 3 دقائق<br>\
+<br>\
+قرص الجليد: يتسبب في تغيير دائرة ألوان هجوم العدو ، وتجميدها لفترة معينة من الوقت ، وإلحاق الضرر<br>\
+<br>\
+المستوى 1 قنبلة الذرة: يمكن دفنها مسبقا في خيوط العنكبوت. يؤدي ضرب عدو على الحائط إلى سقوطه وسقوطه في الضرر ، ومواجهة الضرر ، بحد أقصى 100 ضرر<br>\
+<br>\
+قنبلة الذرة من المستوى 2: قنبلة يدوية ، انفجار تأخير لمدة 6 ثوان ، تلف المنطقة ، الحد الأقصى للضرر 1000<br>\
+<br>\
+المستوى 3 قنبلة الذرة: الألغام ، تنفجر عند اللمس ، تلف الوجه ، الحد الأقصى للضرر 1000<br>\r\
+                فيديو توضيحي لطريقة اللعب. \r\
+                فيديو\r\
+                TikTok\r\
+                سوق أندرويد\r\
+                القيادة السحابية\r\
+                رمز الوصول\r\
+                متجر أبل\r\
+                في حالة وجود أخطاء جسيمة، يمكنك إرسال رسالة عبر الإعدادات\r\
+                إرسال سجل اللعبة\r\
+                نصيحة اختبار\r\
+                لعبة حقيقية على هاتفين محمولين يدوياً\r\
+                استخدم\r\
+                ابدأ اللعبة على هاتف محمول واحد وأنشئ غرفة بأربعة زملاء للمباراة. كرر العملية نفسها على الهاتف الآخر، مع انتظار 15 ثانية لبدء المباراة. يجب أن يكون لكل فريق ثلاثة روبوتات ذكاء اصطناعي للمساعدة في المعركة.\r\
+                الاختبار الآلي: لاختبار سيناريو المعركة، اضغط على الأيقونة على جميع الهواتف أثناء شاشة بدء تشغيل اللعبة.\r\
+                ثلاث مرات لتفعيل وضع الاختبار (عملية واحدة فقط).\r\
+                الاختبار التلقائي على هاتفين محمولين\r\
+                ابدأ مباراة لعبة على هاتف محمول واحد باستخدام\r\
+                أو 1*ن لبدء مباراة اللعبة. كرر العملية نفسها للهاتف الآخر. عند بدء اللعبة، توجد إشارة Wi-Fi من هاتف محمول واحد (المؤشر عليه 1 باللون الأحمر).\r\
+                انقر على زر الاختبار (المؤشر 2 باللون الأحمر) لبدء الاختبار التلقائي، ستستغرق اللعبة حوالي 7-8 دقائق، يجب ألا يعمل الهاتف المحمول الآخر.\r\
+                سيتم اختبار 3 هواتف محمولة تلقائيًا\r\
+                يختار كل لاعب وضع 2*2 أو 2*ن لبدء اللعبة، هناك 30 ثانية انتظار لبدء اللعبة.\r\
+                إذا كنت ترغب في إدراج فيلا منزلك في اللعبة، يُرجى الاتصال بنا!\r\
+                الشهادات\r\
+                سياسة خصوصية اللعبة\r\
+                ",
+          de:
+            '\
+                VillaWar Es ist ein langsames Scharfschützen-Handyspiel, in dem Spinnen um das Recht kämpfen, in menschlichen Behausungen zu überleben. Durch Teamwork, das Legen von Spinnennetzfallen, Giftfallen, das Versprühen verschiedener Attribute der Spinnennetzkugel, das Ändern der gegnerischen Angriffsattribute und das Beschädigen von Gegnern. \
+                Präsentieren Sie die Umgebung mit wunderschön realistischen Grafiken.<br><br>\
+Spielende:<br>\
+1. Überschreitung des Spiellimits<br>\
+2. Zerstöre den Boss<br>\
+3. Es gibt nur noch ein Team<br>\
+<br>\
+Angriffsschadenskreis: Verstärkt den Angriffsschaden um das 0,1- bis 2,0-fache im Uhrzeigersinn<br>\
+<br>\
+Spinnennetz: Kann gefangen werden: Spinne/Gift/Tier 1 Maisbombe. Wenn ein Feind erwischt wird, ändert er den Farbkreis der Angriffskraft des Gegners und friert für eine bestimmte Zeit ein. Wenn sich eine Maisbombe der Stufe 1 im Netz befindet, verursacht sie eine Explosion.<br>\
+<br>\
+Gift: Kontinuierlicher Schaden, verschwindet nach 3 Minuten<br>\
+<br>\
+Eispuck: Bewirkt, dass sich der Angriffsfarbkreis des Gegners ändert, für eine bestimmte Zeit einfriert und Schaden verursacht<br>\
+<br>\
+Stufe 1 Maisbombe: Kann in Spinnweben vergraben werden; Wenn ein Feind an einer Wand getroffen wird, fällt er zu Boden und erleidet Schaden, Gesichtsschaden, bis zu einem Maximum von 100 Schaden<br>\
+<br>\
+Stufe 2 Maisbombe: Granate, 6 Sekunden verzögerte Explosion, Flächenschaden, maximaler Schaden 1000<br>\
+<br>\
+Level 3 Corn Bomb: Mine, explodiert bei Berührung, Gesichtsschaden, max. Schaden 1000<br>\r\
+                Gameplay-Demo-Video. \r\
+                Video\r\
+                TikTok\r\
+                Android-Markt\r\
+                Cloud-Laufwerk\r\
+                Zugangscode\r\
+                Apple Store\r\
+                Bei schwerwiegenden Fehlern können Sie über die Einstellungen eine Nachricht senden\r\
+                Spielprotokoll senden\r\
+                Test-Tipp:\r\
+                Echtes Spiel auf zwei Handys manuell\r\
+                Verwenden Sie\r\
+                Starten Sie das Spiel auf einem Mobiltelefon und erstellen Sie einen Raum mit vier Mitspielern für das Spiel. Wiederholen Sie den Vorgang auf dem anderen Handy, wobei Sie 15 Sekunden warten müssen, bis das Spiel beginnt. Jedes Team sollte drei KI-Bots haben, die es im Kampf unterstützen.\r\
+                Automatischer Test: Um das Kampfszenario zu testen, tippen Sie auf allen Handys während des Startbildschirms des Spiels auf das Symbol.\r\
+                Dreimal, um den Testmodus zu aktivieren (nur ein Vorgang).\r\
+                Automatischer Test auf 2 Handys\r\
+                Starten Sie ein Spiel auf einem Mobiltelefon mit\r\
+                oder 1*n, um das Spiel zu starten. Wiederholen Sie den gleichen Vorgang für das andere Handy. Wenn das Spiel beginnt, gibt es ein Wi-Fi-Signal von einem Mobiltelefon (rot markiert 1).\r\
+                Klicken Sie auf die Schaltfläche "Test" (rot markiert mit 2), um den automatischen Test zu starten. Ein Spiel dauert etwa 7-8 Minuten, das andere Mobiltelefon sollte es nicht bedienen.\r\
+                Es werden automatisch 3 Handys getestet\r\
+                Jeder Spieler wählt den Modus 2*2 oder 2*n, um das Spiel zu starten. Es gibt eine Wartezeit von 30 Sekunden, bis das Spiel beginnt.\r\
+                Wenn Sie Ihre Hausvilla in das Spiel aufnehmen möchten, kontaktieren Sie uns bitte!\r\
+                Testimonials.\r\
+                Spiel-Datenschutzerklärung\r\
+                ',
+          es:
+            "\
+                VillaWar Se trata de un juego móvil de francotirador de ritmo lento en el que las arañas luchan por el derecho a sobrevivir en las viviendas humanas. A través del trabajo en equipo, colocando trampas de telaraña, trampas de veneno, rociando varios atributos de la bola de telaraña, cambiando los atributos de ataque del oponente y dañando a los oponentes. \
+                Muestra el entorno con gráficos de gran realismo.<br><br>\
+Fin:<br>\
+1. Exceder el límite del juego<br>\
+2. Destruye al jefe<br>\
+3. Solo queda un equipo<br>\
+<br>\
+Círculo de daño de ataque: Amplifica el daño de ataque 0.1-2.0 veces en el sentido de las agujas del reloj<br>\
+<br>\
+Telaraña: Se puede capturar: Araña/Veneno/Bomba de maíz de nivel 1. Si atrapan a un enemigo, cambiará el círculo de color del poder de ataque del oponente y se congelará durante un cierto período de tiempo; Si hay una bomba de maíz de nivel 1 en la red, causará una explosión.<br>\
+<br>\
+Veneno: Daño continuo, desaparece después de 3 minutos<br>\
+<br>\
+Disco de hielo: hace que el círculo de color de ataque del enemigo cambie, se congele durante un cierto tiempo e inflija daño<br>\
+<br>\
+Bomba de maíz de nivel 1: Se puede enterrar previamente en telarañas; Golpear a un enemigo en una pared hace que caiga y caiga en daño, enfado daño, hasta un máximo de 100 de daño<br>\
+<br>\
+Bomba de maíz de nivel 2: granada, explosión de retardo de 6 segundos, daño de área, daño máximo 1000<br>\
+<br>\
+Bomba de maíz de nivel 3: Mina, explota al tocarla, daño en la cara, daño máximo 1000<br>\r\
+                Vídeo de demostración del juego. \r\
+                Vídeo\r\
+                TikTok\r\
+                Android Market\r\
+                Cloud Drive\r\
+                Código de acceso\r\
+                Apple Store\r\
+                En caso de errores graves, puedes enviar un mensaje a través de Ajustes\r\
+                Enviar registro de juego\r\
+                Sugerencia de prueba:\r\
+                Juego real en dos teléfonos móviles manualmente\r\
+                Utiliza\r\
+                Inicia el juego en un móvil y crea una sala con cuatro compañeros para el partido. Repite el mismo proceso en el otro teléfono, con una espera de 15 segundos para que empiece la partida. Cada equipo debe tener tres robots de IA para ayudar en la batalla.\r\
+                Prueba automática: Para probar el escenario de batalla, toca el icono en todos los teléfonos durante la pantalla de inicio del juego.\r\
+                Tres veces para activar el modo de prueba (una sola operación).\r\
+                Prueba automática en 2 teléfonos móviles\r\
+                Inicia una partida en un teléfono móvil usando\r\
+                o 1*n para iniciar la partida. Repite el mismo proceso para el otro teléfono. Cuando el juego comienza hay una señal Wi-Fi de un teléfono móvil (marcado 1 en rojo).\r\
+                Haga clic en el botón de prueba (marcado 2 en rojo) para iniciar la prueba automática, un juego tardará unos 7-8 minutos, el otro teléfono móvil no debe operarlo.\r\
+                Se probarán automáticamente 3 teléfonos móviles\r\
+                Cada jugador selecciona el modo 2*2 o 2*n para empezar la partida, hay que esperar 30 segundos para que empiece la partida.\r\
+                Si quieres incluir tu casa-villa en el juego, ¡ponte en contacto con nosotros!\r\
+                Testimonios.\r\
+                Política de privacidad del juego\r\
+                ",
+          fr:
+            "\
+                VillaWar Il s'agit d'un jeu mobile de sniper au rythme lent dans lequel les araignées se battent pour le droit de survivre dans les habitations humaines. En travaillant en équipe, en posant des pièges en toile d'araignée, des pièges à venin, en pulvérisant divers attributs de la balle en toile d'araignée, en changeant les attributs d'attaque de l'adversaire et en endommageant les adversaires. \
+                L'environnement est mis en valeur par des graphismes d'un réalisme saisissant.<br><br>\
+Fin du jeu:<br>\
+1. Dépassement de la limite de jeu<br>\
+2. Détruisez le patron<br>\
+3. Il ne reste plus qu’une seule équipe<br>\
+<br>\
+Cercle de dégâts d’attaque : amplifie les dégâts d’attaque de 0,1 à 2,0 fois dans le sens des aiguilles d’une montre.<br>\
+<br>\
+Toile d’araignée : Peut être capturé : Araignée/Venin/Bombe de maïs de niveau 1. Si un ennemi est attrapé, il changera le cercle de couleur de la puissance d’attaque de l’adversaire et se figera pendant un certain temps ; S’il y a une bombe de maïs de niveau 1 sur le net, elle provoquera une explosion.<br>\
+<br>\
+Venin : Dégâts continus, disparaît au bout de 3 minutes<br>\
+<br>\
+Ice Puck : Fait changer le cercle de couleur de l’attaque de l’ennemi, se fige pendant un certain temps et inflige des dégâts<br>\
+<br>\
+Bombe de maïs de niveau 1 : Peut être pré-enterrée dans des toiles d’araignée ; Frapper un ennemi sur un mur le fait tomber et tomber dans des dégâts, des dégâts de visage, jusqu’à un maximum de 100 dégâts<br>\
+<br>\
+Bombe de maïs de niveau 2 : grenade, explosion à retardement de 6 secondes, dégâts de zone, dégâts maximum 1000<br>\
+<br>\
+Bombe de maïs de niveau 3 : mine, explose au toucher, dégâts au visage, dégâts max 1000<br>\r\
+                Vidéo de démonstration du jeu. \r\
+                Vidéo\r\
+                TikTok\r\
+                Android Market\r\
+                Lecteur de nuages\r\
+                Code d'accès\r\
+                Apple Store\r\
+                En cas d'erreurs graves, vous pouvez envoyer un message via Réglages\r\
+                Envoyer le journal de jeu\r\
+                Test Tip :\r\
+                Jeu réel sur deux téléphones portables manuellement\r\
+                Utilisation\r\
+                Démarrez le jeu sur un téléphone portable et créez une salle avec quatre coéquipiers pour le match. Répétez le même processus sur l'autre téléphone, avec une attente de 15 secondes pour le début du match. Chaque équipe doit disposer de trois robots d'IA pour l'assister dans la bataille.\r\
+                Test automatisé : pour tester le scénario de la bataille, appuyez sur l'icône sur tous les téléphones pendant l'écran de démarrage du jeu.\r\
+                Trois fois pour activer le mode test (une seule opération).\r\
+                Test automatique sur 2 téléphones portables\r\
+                Commencez un match sur un téléphone mobile en utilisant\r\
+                ou 1*n pour démarrer le match. Répétez le même processus pour l'autre téléphone. Lorsque le jeu commence, un téléphone mobile émet un signal Wi-Fi (marqué 1 en rouge).\r\
+                Cliquez sur le bouton de test (marqué 2 en rouge) pour lancer le test automatique. Une partie dure environ 7-8 minutes, l'autre téléphone portable ne doit pas l'utiliser.\r\
+                3 téléphones portables seront testés automatiquement\r\
+                Chaque joueur sélectionne le mode 2*2 ou 2*n pour commencer le jeu. Il faut attendre 30 secondes pour que le jeu commence.\r\
+                Si vous souhaitez inclure votre maison-villa dans le jeu, contactez-nous !\r\
+                Témoignages.\r\
+                Politique de confidentialité du jeu\r\
+                ",
+          "hi-IN":
+            "\
+                VillaWar यह एक धीमी स्नाइपर मोबाइल खेल है जहां स्पाइडर मानव वास्तव में जीवित होने के लिए अपने अधिकार के लिए लड़े हैं. टीम सहयोग के द्वारा, स्पाइडर वेब ट्रैप, वेनोम ट्रैप, और विभिन्न गुण स्पाइडर टेनिस बॉलों को विरोधी के हमल गुणों को बदलने के लिए सेट कर दि\
+                वातावरण को अद्भुत वास्तविक दृश्यों के साथ दिखाएँ<br><br>\
+खेल ख़त्म:<br>\
+1. खेल की सीमा से अधिक<br>\
+2. बॉस को नष्ट करें<br>\
+3. केवल एक टीम बची है<br>\
+<br>\
+अटैक डैमेज सर्कल: अटैक डैमेज को 0.1-2.0 बार क्लॉकवाइज बढ़ाता है<br>\
+<br>\
+मकड़ी का जाला: कब्जा किया जा सकता है: स्पाइडर/वेनम/टियर 1 कॉर्न बम। यदि कोई दुश्मन पकड़ा जाता है, तो यह प्रतिद्वंद्वी के हमले की शक्ति के रंग चक्र को बदल देगा और एक निश्चित अवधि के लिए फ्रीज हो जाएगा; यदि नेट पर स्तर 1 कॉर्न बम है, तो यह विस्फोट का कारण बनेगा।<br>\
+<br>\
+जहर: लगातार क्षति, 3 मिनट के बाद गायब हो जाता है<br>\
+<br>\
+आइस पक: दुश्मन के हमले के रंग चक्र को बदलने, एक निश्चित समय के लिए फ्रीज करने और नुकसान का सौदा करने का कारण बनता है<br>\
+<br>\
+स्तर 1 मकई बम: कोबवे में पूर्व-दफन किया जा सकता है; दीवार पर दुश्मन को मारने से वे गिर जाते हैं और नुकसान में गिर जाते हैं, नुकसान का सामना करते हैं, अधिकतम 100 क्षति तक<br>\
+<br>\
+स्तर 2 मकई बम: ग्रेनेड, 6 सेकंड देरी विस्फोट, क्षेत्र क्षति, अधिकतम क्षति 1000<br>\
+<br>\
+स्तर 3 मकई बम: मेरा, स्पर्श पर विस्फोट, चेहरे की क्षति, अधिकतम क्षति 1000<br>\r\
+                खेल प्रदर्शन वीडियो:\r\
+                वीडियो\r\
+                TikTok\r\
+                एन्ड्रोडो मार्केट\r\
+                बादल ड्राइव\r\
+                पहुँच कोड\r\
+                एपल स्टोर\r\
+                यदि गंभीर त्रुटियाँ हैं, तो वे सेट कर सकते हैं\r\
+                खेल लॉग भेजें\r\
+                जाँच प्रोम्प्ट:\r\
+                एक वास्तविक खेल में दो मोबाइल फोन मैनुअल रूप से सहभागी है\r\
+                उपयोग\r\
+                मोबाइल फोन में खेल प्रारंभ करें और स्पर्धा के लिए चार टीम्यूट के साथ एक कमरा बनाएँ एक ही प्रक्रिया को दूसरे फोन के लिए दोहराएँ और खेल शुरू करने से पहले 15 सेकण्ड के लिए इंतजार करें. हर टीम को लड़ाई में मदद करने के लिए तीन AI रोबोट होना चाहिए।\r\
+                स्वचालित परीक्षण: कंबाट सीनेरियो को जाँचें, जहाँ सभी फोन खेल स्टार्ट स्क्रीन पर प्रतीक पर क्लिक करें\r\
+                परीक्षण मोड तीन बार सक्रिय करें (केवल एक बार कार्य करें).\r\
+                2 मोबाइल फोन की स्वचालित जाँच\r\
+                मोबाइल फोन पर इस्तेमाल कर रहा है\r\
+                या 1 * n के साथ खेल स्पर्धा प्रारंभ करें. दूसरे फोन के लिए उसी प्रक्रिया को दोहराएँ. खेल प्रारंभ होने के बाद, मोबाइल फोन से एक वाईफ़ाई संकेत है (लाल के रूप में 1 के रूप में चिह्नित है)\r\
+                होस्ट परीक्षण करने के लिए, स्वचालित परीक्षण प्रारंभ करने के लिए परीक्षण बटन को क्लिक करें (लाल के रूप में चिह्नित है) स्वचालित परीक\r\
+                3 मोबाइल फोन की स्वचालित परीक्षण\r\
+                हर खेलाड़ी ने खेल प्रारंभ करने के लिए 2 * 2 या 2 * n मोड चुनें\r\
+                यदि आप अपने घर/विला को खेल में समायोजन करना चाहते हैं, कृपया हमें संपर्क करें\r\
+                जाँच प्रोम्प्ट:\r\
+                खेल निजी नीति\r\
+                ",
+          id:
+            "\
+                VillaWar Ini adalah game mobile sniper bertempo lambat di mana laba-laba memperjuangkan hak untuk bertahan hidup di tempat tinggal manusia. Melalui kerja sama tim, memasang jebakan jaring laba-laba, jebakan racun, menyemprotkan berbagai atribut bola jaring laba-laba, mengubah atribut serangan lawan, dan merusak lawan. \
+                Menampilkan lingkungan dengan grafis yang sangat realistis.<br><br>\
+Tamat:<br>\
+1. Melebihi batas permainan<br>\
+2. Hancurkan bos<br>\
+3. Hanya ada satu tim yang tersisa<br>\
+<br>\
+Lingkaran Kerusakan Serangan: Memperkuat Kerusakan Serangan sebesar 0,1-2,0 kali searah jarum jam<br>\
+<br>\
+Jaring Laba-laba: Dapat ditangkap: Laba-laba/Racun/Bom Jagung Tingkat 1. Jika musuh tertangkap, itu akan mengubah lingkaran warna kekuatan serangan lawan dan membeku untuk jangka waktu tertentu; Jika ada bom jagung level 1 di jaring, itu akan menyebabkan ledakan.<br>\
+<br>\
+Racun: Kerusakan terus menerus, menghilang setelah 3 menit<br>\
+<br>\
+Ice Puck: Menyebabkan lingkaran warna serangan musuh berubah, membeku untuk jangka waktu tertentu, dan memberikan kerusakan<br>\
+<br>\
+Bom Jagung Level 1: Dapat dikubur terlebih dahulu dalam sarang laba-laba; Memukul musuh di dinding menyebabkan mereka jatuh dan jatuh ke dalam kerusakan, face damage, hingga maksimal 100 damage<br>\
+<br>\
+Bom Jagung Level 2: Granat, ledakan penundaan 6 detik, kerusakan area, kerusakan maksimum 1000<br>\
+<br>\
+Bom Jagung Level 3: Tambangku, meledak saat disentuh, kerusakan wajah, kerusakan maksimal 1000<br>\r\
+                Video demo gameplay. \r\
+                Video\r\
+                TikTok\r\
+                Pasar Android\r\
+                Cloud Drive\r\
+                Kode Akses\r\
+                Apple Store\r\
+                Jika terjadi kesalahan serius, Anda dapat mengirim pesan melalui Pengaturan\r\
+                Kirim log permainan\r\
+                Kiat Tes:\r\
+                Permainan nyata di dua ponsel secara manual\r\
+                Menggunakan\r\
+                Mulai permainan di satu ponsel dan buat ruangan dengan empat rekan satu tim untuk pertandingan. Ulangi proses yang sama di ponsel yang lain, dengan menunggu selama 15 detik hingga pertandingan dimulai. Setiap tim harus memiliki tiga bot AI untuk membantu dalam pertempuran.\r\
+                Tes otomatis: Untuk menguji skenario pertempuran, ketuk ikon di semua ponsel selama layar permulaan game.\r\
+                Tiga kali untuk mengaktifkan mode uji coba (hanya satu kali operasi).\r\
+                Tes otomatis pada 2 ponsel\r\
+                Memulai pertandingan game di satu ponsel dengan menggunakan\r\
+                atau 1*n untuk memulai pertandingan game. Ulangi proses yang sama untuk ponsel lainnya. Saat permainan dimulai, ada sinyal Wi-Fi dari satu ponsel (ditandai dengan warna merah).\r\
+                Klik pada tombol tes (ditandai 2 dengan warna merah) untuk memulai tes otomatis, permainan akan memakan waktu sekitar 7-8 menit, ponsel lain tidak boleh mengoperasikannya.\r\
+                3 ponsel akan diuji secara otomatis\r\
+                Setiap pemain memilih mode 2 * 2 atau 2 * n untuk memulai permainan, ada waktu 30 detik untuk memulai permainan.\r\
+                Jika Anda ingin memasukkan rumah-vila Anda ke dalam permainan, silakan hubungi kami!\r\
+                Testimoni\r\
+                Kebijakan Privasi Permainan\r\
+                ",
+          pt:
+            "\
+                VillaWar É um jogo móvel de atirador furtivo de ritmo lento em que as aranhas lutam pelo direito de sobreviver em habitações humanas. Através do trabalho em equipe, colocando armadilhas de teia de aranha, armadilhas de veneno, pulverizando vários atributos da bola de teia de aranha, alterando os atributos de ataque do oponente e danificando os oponentes. \
+                Mostra o ambiente com gráficos realistas.<br><br>\
+Fim do jogo:<br>\
+1. Exceder o limite do jogo<br>\
+2. Destrua o chefe<br>\
+3. Resta apenas uma equipa<br>\
+<br>\
+Círculo de Dano de Ataque: Amplifica o Dano de Ataque em 0,1-2,0 vezes no sentido horário<br>\
+<br>\
+Teia de Aranha: Pode ser capturado: Spider/Venom/Tier 1 Corn Bomb. Se um inimigo for pego, ele mudará o círculo de cores do poder de ataque do oponente e congelará por um certo período de tempo; Se houver uma bomba de milho de nível 1 na rede, ela causará uma explosão.<br>\
+<br>\
+Veneno: Dano contínuo, desaparece após 3 minutos<br>\
+<br>\
+Ice Puck: Faz com que o círculo de cores de ataque do inimigo mude, congele por um certo período de tempo e cause dano<br>\
+<br>\
+Bomba de Milho Nível 1: Pode ser pré-enterrada em teias de aranha; Bater em um inimigo em uma parede faz com que eles caiam e caiam em dano, enfrente danos, até um máximo de 100 danos<br>\
+<br>\
+Nível 2 Corn Bomb: Granada, 6 segundos de atraso explosão, danos na área, dano máximo 1000<br>\
+<br>\
+Level 3 Corn Bomb: Mina, explode ao toque, dano facial, dano máximo 1000<br>\r\
+                Vídeo de demonstração da jogabilidade. \r\
+                Vídeo de demonstração\r\
+                TikTok\r\
+                Mercado Android\r\
+                Unidade de nuvem\r\
+                Código de acesso\r\
+                Loja da Apple\r\
+                Em caso de erros graves, pode enviar uma mensagem através de Definições\r\
+                Enviar registo de jogo\r\
+                Sugestão de teste:\r\
+                Jogo real em dois telemóveis manualmente\r\
+                Utilizar\r\
+                Inicie o jogo num telemóvel e crie uma sala com quatro colegas de equipa para o jogo. Repita o mesmo processo no outro telemóvel, com uma espera de 15 segundos para o início do jogo. Cada equipa deve ter três bots de IA para ajudar na batalha.\r\
+                Teste automatizado: Para testar o cenário de batalha, toque no ícone em todos os telemóveis durante o ecrã de arranque do jogo.\r\
+                Três vezes para ativar o modo de teste (apenas uma operação).\r\
+                Teste automático em 2 telemóveis\r\
+                Inicie uma partida de jogo num telemóvel utilizando\r\
+                ou 1*n para iniciar a partida de jogo. Repetir o mesmo processo para o outro telemóvel. Quando o jogo começa, há um sinal Wi-Fi de um telemóvel (marcado a vermelho com 1).\r\
+                Clique no botão de teste (marcado com 2 a vermelho) para iniciar o teste automático, um jogo demorará cerca de 7-8 minutos, o outro telemóvel não deve funcionar.\r\
+                3 telemóveis serão testados automaticamente\r\
+                Cada jogador selecciona o modo 2*2 ou 2*n para iniciar o jogo, há uma espera de 30 segundos para o jogo começar.\r\
+                Se quiser incluir a sua casa-villa no jogo, contacte-nos!\r\
+                Testemunhos.\r\
+                Política de privacidade do jogo\r\
+                ",
+          ja:
+            "\
+                VillaWar クモが人間の住居で生き残る権利をかけて戦う、スローペースのスナイパーモバイルゲームです。 チームワークで蜘蛛の巣トラップや毒トラップを仕掛け、様々な属性の蜘蛛の巣玉を散布し、相手の攻撃属性を変化させ、相手にダメージを与えます。 \
+                美しくリアルなグラフィックで環境を紹介。<br><br>\
+ゲームは終わりました：<br>\
+1. ゲームリミットの超過<br>\
+2.ボスを破壊する<br>\
+3. 残すところあと1チーム<br>\
+<br>\
+攻撃ダメージサークル:攻撃ダメージを時計回りに0.1〜2.0倍増幅します<br>\
+<br>\
+クモの巣:捕獲可能:クモ/ヴェノム/ティア1コーンボム。 敵を捕らえると、相手の攻撃力カラーサークルが変わり、一定時間フリーズします。 ネット上にレベル1のコーン爆弾があると爆発を起こすよ。<br>\
+<br>\
+ヴェノム:継続的なダメージ、3分後に消える<br>\
+<br>\
+アイスパック:敵の攻撃カラーサークルを変化させ、一定時間凍結してダメージを与える<br>\
+<br>\
+レベル1コーンボム:クモの巣に事前に埋めることができます。 敵を壁にぶつけると、敵は落下してダメージを受け、最大100ダメージまでダメージを受けます<br>\
+<br>\
+レベル2 コーンボム: グレネード、6秒遅延爆発、範囲ダメージ、最大ダメージ1000<br>\
+<br>\
+レベル3コーンボム:地雷、タッチで爆発、顔面ダメージ、最大ダメージ1000<br>\r\
+                ゲームプレイデモビデオ \r\
+                ビデオ\r\
+                TikTok\r\
+                アンドロイドマーケット\r\
+                クラウドドライブ\r\
+                アクセスコード\r\
+                アップルストア\r\
+                重大なエラーが発生した場合は、設定からメッセージを送信できます。\r\
+                ゲームログを送信\r\
+                テストのヒント\r\
+                2台の携帯電話で実際の対局を手動で行う\r\
+                使用方法\r\
+                片方の携帯電話で対局を開始し、4人のチームメイトでルームを作成します. もう一方の携帯電話でも同じ手順を繰り返し、試合開始まで15秒待つ。 各チームには、対戦をサポートするAIボットが3体いるはずです。\r\
+                自動テスト: 対戦シナリオをテストするには、ゲーム起動中にすべての機種でアイコンをタップします。\r\
+                3回タップするとテストモードが起動します（操作は1回のみ）。\r\
+                2台の携帯電話で自動テスト\r\
+                1台の携帯電話で\r\
+                または1*nで対局を開始します. もう一方の携帯電話でも同じ操作を繰り返します。ゲームが始まると、1台の携帯電話からWi-Fi信号が送信されます（赤でマークされた1）。\r\
+                テストボタン(赤枠2)をクリックすると自動テストが開始されます。\r\
+                3台の携帯電話が自動的にテストされます\r\
+                各プレイヤーは2*2または2*nモードを選択してゲームを開始します、ゲーム開始まで30秒の待ち時間があります。\r\
+                あなたのハウス・ヴィラをゲームに参加させたい場合は、ご連絡ください！\r\
+                お客様の声\r\
+                ゲームプライバシーポリシー\r\
+                ",
+          ko:
+            "\
+                VillaWar 거미들이 인간의 주거지에서 생존권을 위해 싸우는 느린 속도의 스나이퍼 모바일 게임입니다. 팀워크를 통해 거미줄 함정, 독 덫을 설치하고 거미줄 공의 다양한 속성을 분사하여 상대의 공격 속성을 변경하고 상대에게 피해를 입힙니다. \
+                아름답고 사실적인 그래픽으로 환경을 보여줍니다.<br><br>\
+게임 오버:<br>\
+1. 게임 한도 초과<br>\
+2. 보스를 파괴하라<br>\
+3. 한 팀만 남았습니다<br>\
+<br>\
+공격 데미지 서클: 공격 데미지를 시계 방향으로 0.1-2.0배 증폭합니다.<br>\
+<br>\
+거미줄: 점령 가능: 거미/독/티어 1 옥수수 폭탄. 적을 잡으면 상대의 공격력 컬러 서클이 변경되고 일정 시간 동안 동결됩니다. 그물에 레벨 1 옥수수 폭탄이 있으면 폭발을 일으킵니다.<br>\
+<br>\
+베놈: 지속적인 피해, 3분 후 사라짐<br>\
+<br>\
+아이스 퍽 : 적의 공격 컬러 서클이 변화하고, 일정 시간 동안 동결되며, 피해를 입힙니다.<br>\
+<br>\
+레벨 1 옥수수 폭탄: 거미줄에 미리 묻힐 수 있습니다. 벽에 맞은 적을 때리면 적이 쓰러져 피해를 입고, 직면 시 최대 100의 피해를 입습니다.<br>\
+<br>\
+레벨 2 옥수수 폭탄: 수류탄, 6초 지연 폭발, 범위 피해, 최대 피해 1000<br>\
+<br>\
+레벨 3 옥수수 폭탄: 지뢰, 터치 시 폭발, 얼굴 손상, 최대 피해 1000<br>\r\
+                게임 플레이 데모 영상. \r\
+                비디오\r\
+                TikTok\r\
+                안드로이드 마켓\r\
+                클라우드 드라이브\r\
+                액세스 코드\r\
+                Apple 스토어\r\
+                심각한 오류가 발생하면 설정을 통해 메시지를 보낼 수 있습니다.\r\
+                게임 로그 보내기\r\
+                테스트 팁:\r\
+                두 대의 휴대폰에서 수동으로 실제 게임\r\
+                사용\r\
+                한 휴대폰에서 게임을 시작하고 4명의 팀원이 있는 방을 만들어 경기를 진행합니다. 다른 휴대폰에서도 동일한 과정을 반복하고 15초간 기다린 후 경기가 시작됩니다. 각 팀에는 전투를 지원할 AI 봇이 세 명씩 있어야 합니다.\r\
+                자동 테스트: 전투 시나리오를 테스트하려면 게임 시작 화면에서 모든 휴대폰의 아이콘을 탭합니다.\r\
+                세 번 탭하면 테스트 모드가 활성화됩니다(한 번만 작동).\r\
+                휴대폰 2대에서 자동 테스트\r\
+                휴대폰 한 대에서 게임 매치를 시작하려면\r\
+                또는 1*n을 눌러 게임 매치를 시작합니다. 다른 휴대폰에서도 동일한 과정을 반복합니다. 게임이 시작되면 한 휴대폰(빨간색으로 1로 표시된)에서 Wi-Fi 신호가 나옵니다.\r\
+                테스트 버튼(빨간색으로 2번 표시)을 클릭하면 자동 테스트가 시작되며, 게임은 약 7-8분 정도 소요되며 다른 휴대폰은 작동하지 않습니다.\r\
+                휴대폰 3대가 자동으로 테스트됩니다.\r\
+                각 플레이어는 게임을 시작하기 위해 2 * 2 또는 2 * N 모드를 선택하면 게임이 시작될 때까지 30 초 동안 기다립니다.\r\
+                하우스 빌라를 게임에 포함시키고 싶으시면 저희에게 연락주세요!\r\
+                이용 후기.\r\
+                게임 개인정보 보호정책\r\
+                ",
+          uk:
+            "\
+                VillaWar Це повільна снайперська мобільна гра, в якій павуки борються за право вижити в людських оселях. Завдяки командній роботі, розставляючи пастки з павутиння, пастки з отрутою, розпилюючи різні атрибути павутинної кульки, змінюючи атрибути атаки супротивника та завдаючи шкоди супротивникам. \
+                Демонструйте навколишнє середовище з чудово реалістичною графікою.<br><br>\
+Гра скінчилась:<br>\
+1. Перевищення ігрового ліміту<br>\
+2. Знищити боса<br>\
+3. Залишилася лише одна команда<br>\
+<br>\
+Коло ушкодження від атаки: посилює шкоду від атаки в 0,1-2,0 рази за годинниковою стрілкою<br>\
+<br>\
+Павутина: Можна захопити: Павук/Отрута/Кукурудзяна бомба 1 рівня. Якщо ворога спіймають, він змінить коло кольору сили атаки суперника і зависне на певний період часу; Якщо в мережі знайдеться кукурудзяна бомба 1 рівня, вона викличе вибух.<br>\
+<br>\
+Отрута: Безперервне ушкодження, зникає через 3 хвилини<br>\
+<br>\
+Крижана шайба: спричиняє зміну колірного кола атаки ворога, зависання на певний час і нанесення шкоди<br>\
+<br>\
+Кукурудзяна бомба 1 рівня: можна попередньо закопати в павутину; Удар ворога об стіну змушує його падати і потрапляти в шкоду, шкоду від обличчя, максимум до 100 ушкоджень<br>\
+<br>\
+Кукурудзяна бомба 2 рівня: граната, затримка вибуху на 6 секунд, шкода по площі, максимальна шкода 1000<br>\
+<br>\
+Кукурудзяна бомба 3 рівня: Міна, вибухає при дотику, шкода на обличчі, максимальна шкода 1000<br>\r\
+                Ігрове демонстраційне відео. \r\
+                Відео\r\
+                TikTok\r\
+                Android Market\r\
+                Хмарне сховище\r\
+                Код доступу\r\
+                Apple Store\r\
+                У разі серйозних помилок ви можете надіслати повідомлення через Налаштування\r\
+                Надіслати лог гри\r\
+                Тестова підказка:\r\
+                Реальна гра на двох мобільних телефонах вручну\r\
+                Використання\r\
+                Запустіть гру на одному мобільному телефоні і створіть кімнату з чотирма гравцями для матчу. Повторіть той самий процес на іншому телефоні, з 15-секундним очікуванням початку матчу. Кожна команда повинна мати трьох ботів зі штучним інтелектом, які допомагатимуть у битві.\r\
+                Автоматичний тест: Щоб протестувати сценарій бою, торкніться іконки на всіх телефонах під час запуску гри.\r\
+                Тричі, щоб активувати режим тестування (лише одна операція).\r\
+                Автоматичний тест на 2 мобільних телефонах\r\
+                Почніть ігровий матч на одному мобільному телефоні за допомогою\r\
+                або 1*n, щоб розпочати ігровий матч. Повторіть той самий процес для іншого телефону. Коли гра почнеться, з одного мобільного телефону (позначений 1 червоним кольором) є сигнал Wi-Fi.\r\
+                Натисніть на кнопку тесту (позначена червоним 2), щоб почати автоматичний тест, гра триватиме близько 7-8 хвилин, інший мобільний телефон не повинен працювати з ним.\r\
+                3 мобільні телефони будуть протестовані автоматично\r\
+                Кожен гравець обирає режим 2*2 або 2*n, щоб почати гру, чекайте 30 секунд, поки гра почнеться.\r\
+                Якщо ви хочете додати свій будинок-віллу в гру, будь ласка, зв'яжіться з нами!\r\
+                Відгуки.\r\
+                Політика конфіденційності гри\r\
+                            ",
+          tr:
+            "\
+                VillaWar Örümceklerin insan konutlarında hayatta kalma hakkı için savaştığı yavaş tempolu bir keskin nişancı mobil oyunudur. Takım çalışması, örümcek ağı tuzakları, zehir tuzakları, örümcek ağı topunun çeşitli özelliklerini püskürtme, rakibin saldırı özelliklerini değiştirme ve rakiplere zarar verme yoluyla. \
+                Çevreyi güzel ve gerçekçi grafiklerle sergileyin.<br><br>\
+				Oyun Bitti:<br>\
+1. Oyun limitini aşmak<br>\
+2. Patronu yok et<br>\
+3. Sadece bir takım kaldı<br>\
+<br>\
+Saldırı Hasarı Çemberi: Saldırı Hasarını saat yönünde 0,1-2,0 kat artırır<br>\
+<br>\
+Örümcek Ağı: Yakalanabilir: Örümcek/Venom/Kademe 1 Mısır Bombası. Bir düşman yakalanırsa, rakibin saldırı gücü renk çemberini değiştirir ve belirli bir süre donar; Ağda 1. seviye bir mısır bombası varsa, patlamaya neden olur.<br>\
+<br>\
+Zehir: Sürekli hasar, 3 dakika sonra kaybolur<br>\
+<br>\
+Buz Diski: Düşmanın saldırı renk çemberinin değişmesine, belirli bir süre donmasına ve hasar vermesine neden olur<br>\
+<br>\
+Seviye 1 Mısır Bombası: Örümcek ağlarına önceden gömülebilir; Bir düşmanı duvara vurmak, onların düşmesine ve hasar görmesine, maksimum 100 hasara kadar hasarla karşı karşıya kalmasına neden olur<br>\
+<br>\
+Seviye 2 Mısır Bombası: El bombası, 6 saniye gecikmeli patlama, alan hasarı, maksimum hasar 1000<br>\
+<br>\
+Seviye 3 Mısır Bombası: Mayın, dokunulduğunda patlar, yüz hasarı, maksimum hasar 1000<br>\r\
+                Oynanış demo videosu. \r\
+                Video\r\
+                TikTok\r\
+                Android Market\r\
+                Bulut Sürücü\r\
+                Erişim Kodu\r\
+                Apple Store\r\
+                Ciddi hatalar olması durumunda, Ayarlar üzerinden bir mesaj gönderebilirsiniz\r\
+                Oyun günlüğü gönder\r\
+                Test İpucu:\r\
+                İki cep telefonunda manuel olarak gerçek oyun\r\
+                Kullanım\r\
+                Oyunu bir cep telefonunda başlatın ve maç için dört takım arkadaşıyla bir oda oluşturun. Aynı işlemi diğer telefonda da tekrarlayın ve maçın başlaması için 15 saniye bekleyin. Her takımın savaşta yardımcı olacak üç AI botu olmalıdır.\r\
+                Otomatik test: Savaş senaryosunu test etmek için oyun başlangıç ekranı sırasında tüm telefonlardaki simgeye dokunun.\r\
+                Test modunu etkinleştirmek için üç kez dokunun (yalnızca bir işlem).\r\
+                2 cep telefonunda otomatik test\r\
+                Bir cep telefonunda bir oyun maçı başlatmak için\r\
+                veya 1*n tuşlarına basarak oyunu başlatın. Aynı işlemi diğer telefon için de tekrarlayın. Oyun başladığında bir cep telefonundan (kırmızı ile işaretlenmiş 1) Wi-Fi sinyali vardır.\r\
+                Otomatik testi başlatmak için test düğmesine (kırmızı ile işaretlenmiş 2) tıklayın, bir oyun yaklaşık 7-8 dakika sürecektir, diğer cep telefonu onu çalıştırmamalıdır.\r\
+                3 cep telefonu otomatik olarak test edilecektir\r\
+                Her oyuncu oyuna başlamak için 2*2 veya 2*n modunu seçer, oyunun başlaması için 30 saniye beklenir.\r\
+                Evinizi-villanızı oyuna dahil etmek istiyorsanız, lütfen bizimle iletişime geçin!\r\
+                Referanslar.\r\
+                Oyun Gizlilik Politikası\r\
+                ",
+          "zh-Hans-CN":
+            "\
+                VillaWar 是一款蜘蛛在人类住所争取生存权的慢节奏狙击手机游戏。通过团队协作，布蛛网陷阱、毒液陷阱，喷射各种属性蛛网球，改变对方攻击属性及伤害对手。\
+                以精美写实画面展示环境。<br><br>\
+				游戏结束：<br>\
+1.超过游戏限制时间<br>\
+2.消灭BOSS<br>\
+3.剩下唯一一只队伍<br>\
+<br>\
+攻击力色圈：顺时针方向放大攻击力 0.1-2.0 倍<br>\
+<br>\
+蜘蛛网：可以捕获：蜘蛛/毒液/一级玉米炸弹。如果捕获到敌人，会改变对方攻击力色圈，并冻结一定时间；如果网上有一级玉米炸弹，会引发爆炸。<br>\
+<br>\
+毒液：连续伤害，3分钟后消失<br>\
+<br>\
+冰球：导致敌方攻击色圈改变，冻结一定时间，并产生伤害<br>\
+<br>\
+1级玉米炸弹：可以预埋于蜘蛛网；击中墙壁上的敌人，会导致其落下并摔伤，面伤害，最大伤害100<br>\
+<br>\
+2级玉米炸弹：手雷，6秒延时爆炸，面伤害，最大伤害1000<br>\
+<br>\
+3级玉米炸弹：地雷，触碰时爆炸，面伤害，最大伤害 1000\r\
+	            游戏展示视频: 	\r\
+	            视频\r\
+	            抖音\r\
+	            安卓市场\r\
+	            云盘\r\
+	            访问码\r\
+	            苹果商城\r\
+	            如有严重错误，可以通过 设置\r\
+	            发送游戏日志\r\
+	            测试提示：\r\
+	            两部手机手动进行真实比赛\r\
+	            使用\r\
+	            在一部手机上开始游戏，并为比赛创建一个有四名队友的房间。对另一部手机重复同样的过程, 比赛开始 15 秒等待。每个团队应该有三个 AI 机器人辅助战斗。\r\
+	            自动测试： 测试战斗场景，所有手机在游戏启动画面时，点击图标\r\
+	            三次开启测试模式(只操作一次)。\r\
+	            2 部手机自动测试\r\
+	             在一部手机上使用\r\
+	             或者 1*n 开始游戏比赛。对另一部手机重复同样的过程。 游戏开始后有一部手机的 Wi-Fi 信号(红色标注 1)\r\
+	             为测试主机，点击测试按钮(红色标注 2)开始自动测试，一场比赛大约 7-8 分钟，另外一部手机不要去操作它\r\
+	             3 部手机自动测试\r\
+	              每个玩家选择 2*2 或者 2*n 模式开始游戏，比赛开始有 30 秒等待\r\
+	              想要把你的房屋/别墅制作到游戏里, 请联系我们\r\
+	              测试提示:\r\
+	              游戏隐私政策\r\
+                ",
+          "zh-Hant-TW":
+            "\
+                VillaWar 這是一款慢節奏的狙擊手手機遊戲，蜘蛛為了在人類居住的地方爭取生存的權利而戰鬥。透過團隊合作，布下蜘蛛網陷阱、毒液陷阱，噴灑各種屬性的蜘蛛網球，改變對手的攻擊屬性，傷害對手。\
+                以精美逼真的圖像展示環境。<br><br>\
+遊戲結束：<br>\
+1.超過遊戲限制時間<br>\
+2.消滅BOSS<br>\
+3.剩下唯一一隻隊伍<br>\
+<br>\
+攻擊力色圈：順時針方向放大攻擊力 0.1-2.0 倍<br>\
+<br>\
+蜘蛛網：可以捕獲：蜘蛛/毒液/一級玉米炸彈。 如果捕獲到敵人，會改變對方攻擊力色圈，並凍結一定時間; 如果網上有一級玉米炸彈，會引發爆炸。<br>\
+<br>\
+毒液：連續傷害，3分鐘后消失<br>\
+<br>\
+冰球：導致敵方攻擊色圈改變，凍結一定時間，併產生傷害<br>\
+<br>\
+1級玉米炸彈：可以預埋於蜘蛛網; 擊中牆壁上的敵人，會導致其落下並摔傷，面傷害，最大傷害100<br>\
+<br>\
+2級玉米炸彈：手雷，6秒延時爆炸，面傷害，最大傷害1000<br>\
+<br>\
+3級玉米炸彈：地雷，觸碰時爆炸，面傷害，最大傷害 1000<br>\r\
+                遊戲示範影片。\r\
+                視訊\r\
+                TikTok\r\
+                安卓市場\r\
+                雲端驅動程式\r\
+                存取碼\r\
+                蘋果商店\r\
+                如果發生嚴重錯誤，您可以透過設定傳送遊戲日誌\r\
+                傳送遊戲記錄\r\
+                測試提示：\r\
+                手動在兩部手機上進行真實遊戲\r\
+                使用\r\
+                在一部手機上開始遊戲，並建立一個有四位隊友的房間進行比賽。在另一部手機上重複相同的程序，等待 15 秒即可開始對戰。每隊應有三個 AI 機器人協助對戰。\r\
+                自動測試： 若要測試對戰情境，請在所有手機上，在遊戲啟動畫面中按一下圖示。\r\
+                在遊戲啟動畫面中按三次以啟動測試模式（僅限一次操作）。\r\
+                2 部手機自動測試\r\
+                在一部手機上開始遊戲對戰，使用\r\
+                或 1*n 開始遊戲對戰。對另一部手機重複相同的程序。遊戲開始時，有一部手機發出 Wi-Fi 訊號（紅色標記 1）。\r\
+                點擊測試按鈕（紅色標記 2）開始自動測試，一局遊戲大概需要 7-8 分鐘，另一部手機不要操作。\r\
+                3 手機自動測試\r\
+                每位玩家選擇 2*2 或 2*n 模式開始遊戲，遊戲開始需要等待 30 秒。 \r\
+                若要將您的房子/別墅做成遊戲，請與我們聯絡！\r\
+                測試提示。\r\
+                遊戲隱私權政策\r\
+                ",
+        };
+        loadLan();
+      };
+    </script>
+  </head>
+  <body>
+    <a href="videos.htm"><img src="VillaWar.png"/></a><br /><br />
+    {?}
+
+    <br />
+    <br />
+    <table>
+      <tbody style="line-height:200%;border:aqua">
+        <tr>
+          <td>{?}</td>
+          <td>
+            <a href="videos.htm">{?}</a> /
+            <a href="https://youtu.be/NwZ5O8_JBJk">YouTube</a> /
+            <a href="https://v.douyin.com/ih2uDa2w">{?}</a>
+          </td>
+        </tr>
+        <tr>
+          <td><span id="spAndroidSize"></span>:</td>
+          <td style="font-size:larger">
+            <a
+              href="https://play.google.com/store/apps/details?id=com.terst.VillaWar"
+              >{?} VillaWar</a
+            >
+            | <a href="#" id="cloudAPKA">{?} APK</a>（{?}：<b
+              id="cloudPassS"
+            ></b
+            >）
+          </td>
+        </tr>
+        <tr>
+          <td><span id="spAppleSize"></span>:</td>
+          <td style="font-size:larger">
+            <a href="https://apps.apple.com/us/app/villawar/id6444094296"
+              >{?} VillaWar</a
+            >
+          </td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <br />
+    <hr />
+    <div id="lan" style="display:none">
+      <img src="lans.png" usemap="#lan" />
+      <a id="map_div"></a>
+    </div>
+    <div id="mail">
+      E-mail: <img src="ok1.png" /><span id="mail_div"></span
+      ><img src="ok2.png" /> <br />{?}<img src="setup.png" /> ->
+      <img src="bug.gif" /> &lt;{?}&gt;
+    </div>
+    <span id="testingtips" style="display:none;float:right">
+      <br />{?} <br />[{?}] {?}<img src="realmatch.png" />（2*4） {?}
+      <br />[{?}]<img src="spider.jpg" width="100" height="100" />{?}
+      <br />[{?}] {?}<img src="realmatch1.png" />（1*2） {?}<img
+        src="autotest.jpg"
+        width="175"
+        height="125"
+      />， {?} <br />[{?}] {?} <br /><br />
+    </span>
+    <hr />
+    <table>
+      <tbody>
+        <tr>
+          <td>
+            <img src="lan.png" width="64" height="64" onclick="switchLan(0);lan.style.display=''" />
+          </td>
+          <td style="line-height:200%">
+            <a id="ad" href="ad.html">{?}</a>
+            <br /><a href="#" onclick="switchLan(2)" style="float:right">{?}</a>
+            <br /><a
+              id="privacy"
+              href="privacy-policy.html?en"
+              style="float:right"
+              >[{?}]</a
+            >
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
